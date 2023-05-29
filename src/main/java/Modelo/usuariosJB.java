@@ -2,7 +2,8 @@ package Modelo;
 
 import java.io.Serializable;
 import java.sql.Date;
-public class usuariosJB implements Serializable{
+
+public class usuariosJB implements Serializable {
     int ID_usuario;
     String usuario;
     String nombre;
@@ -12,37 +13,43 @@ public class usuariosJB implements Serializable{
     String contraseña;
     Date fechaNac;
 
-    public usuariosJB()
-    {
+    public usuariosJB() {
 
+    }
+
+    //VALIDAR USUARIO Y CONTRASEÑA
+    public usuariosJB (String usuario, String email, String contraseña) {
+        this.usuario = usuario;
+        this.email = email;
+        this.contraseña = contraseña;
     }
 
     //BUSCAR O ELIMINAR
-    public usuariosJB(int ID_usuario){
-        this.ID_usuario=ID_usuario;
+    public usuariosJB(int ID_usuario) {
+        this.ID_usuario = ID_usuario;
     }
 
     //INSERTAR Y MODIFICAR
-    public usuariosJB(String usuario, String nombre, String apellido, String direccion, String email, String contraseña,Date fechaNac) {
-        this.usuario=usuario;
-        this.nombre=nombre;
-        this.apellido=apellido;
-        this.direccion=direccion;
-        this.email=email;
-        this.contraseña=contraseña;
-        this.fechaNac=fechaNac; 
+    public usuariosJB(String usuario, String nombre, String apellido, String direccion, String email, String contraseña, Date fechaNac) {
+        this.usuario = usuario;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.direccion = direccion;
+        this.email = email;
+        this.contraseña = contraseña;
+        this.fechaNac = fechaNac;
     }
 
     //MOSTRAR
-    public usuariosJB(int ID_usuario,String usuario, String nombre, String apellido, String direccion, String email, String contraseña,Date fechaNac) {
-        this.ID_usuario=ID_usuario;
-        this.usuario=usuario;
-        this.nombre=nombre;
-        this.apellido=apellido;
-        this.direccion=direccion;
-        this.email=email;
-        this.contraseña=contraseña;
-        this.fechaNac=fechaNac;
+    public usuariosJB(int ID_usuario, String usuario, String nombre, String apellido, String direccion, String email, String contraseña, Date fechaNac) {
+        this.ID_usuario = ID_usuario;
+        this.usuario = usuario;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.direccion = direccion;
+        this.email = email;
+        this.contraseña = contraseña;
+        this.fechaNac = fechaNac;
     }
 
 
@@ -50,6 +57,7 @@ public class usuariosJB implements Serializable{
     public int getId_usuario() {
         return ID_usuario;
     }
+
     public void setId_cliente(int ID_usuario) {
         this.ID_usuario = ID_usuario;
     }
@@ -101,6 +109,7 @@ public class usuariosJB implements Serializable{
     public void setContraseña(String contraseña) {
         this.contraseña = contraseña;
     }
+
     public Date getfechaNac() {
         return fechaNac;
     }
