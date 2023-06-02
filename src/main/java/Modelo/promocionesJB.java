@@ -33,19 +33,19 @@ public class promocionesJB implements Serializable{
 
     //METODOS GET Y SET
 
-    public int getID_promocion() {
+    public int getId_promocion() {
         return ID_promocion;
     }
 
-    public void setID_promocion(int ID_promocion) {
+    public void setId_promocion(int ID_promocion) {
         this.ID_promocion = ID_promocion;
     }
 
-    public int getID_producto() {
+    public int getId_producto() {
         return ID_producto;
     }
 
-    public void setID_producto(int ID_producto) {
+    public void setId_producto(int ID_producto) {
         this.ID_producto = ID_producto;
     }
 

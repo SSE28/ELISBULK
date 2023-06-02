@@ -24,7 +24,7 @@ public class usuariosJB implements Serializable {
         this.contraseña = contraseña;
     }
 
-    //BUSCAR O ELIMINAR
+    //BUSCAR O ELIMINARR
     public usuariosJB(int ID_usuario) {
         this.ID_usuario = ID_usuario;
     }

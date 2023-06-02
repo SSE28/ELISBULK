@@ -26,7 +26,7 @@ public class productoJB implements Serializable {
         this.nombre_pro=nombre_pro;
         this.precio=precio;
         this.descripcion=descripcion;
-        this.ID_categoria=ID_categoria;
+        //this.ID_categoria=ID_categoria;
     }
 
     //MOSTRAR

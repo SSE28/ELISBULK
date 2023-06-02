@@ -17,7 +17,7 @@ public class categoriasJB implements Serializable {
 
     //MODIFICAR E INSERTAR
     public categoriasJB(String nombre_cate) {
-        this.nombre_cate = nombre_cate;
+    this.nombre_cate = nombre_cate;
     }
 
     //MOSTRAR

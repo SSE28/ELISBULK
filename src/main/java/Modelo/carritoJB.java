@@ -39,7 +39,8 @@ public class carritoJB implements Serializable {
     }
 
     //MODIFICAR
-    public carritoJB(float precio,float subtotal) {
+    public carritoJB(float cantidad,float precio,float subtotal) {
+        this.cantidad = cantidad;
         this.precio = precio;
         this.subtotal = subtotal;
     }
@@ -69,7 +70,6 @@ public class carritoJB implements Serializable {
         this.cantidad = cantidad;
     }
 
-
     public float getPrecio() {
         return precio;
     }
@@ -77,7 +77,6 @@ public class carritoJB implements Serializable {
     public void setPrecio(float precio) {
         this.precio = precio;
     }
-
 
     public float getSubtotal() {
         return subtotal;

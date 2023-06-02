@@ -39,7 +39,7 @@ public class ordenesJB implements Serializable {
         this.subtotal = subtotal;
     }
 
-    //INSERTAR
+    //INSERTAR Y MODIFICAR
     public ordenesJB(int ID_usuario, int ID_producto, Date fecha_compra, float cantidad, float precio,
                      String direccion_envio, String estado, float subtotal) {
 
@@ -51,9 +51,6 @@ public class ordenesJB implements Serializable {
         this.direccion_envio = direccion_envio;
         this.estado = estado;
     }
-
-    //MODIFICAR
-
 
     //METODOS GET Y SET
     public int getId_orden() {

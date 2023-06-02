@@ -28,10 +28,11 @@ public class calificacionesJB implements Serializable{
     }
 
     //INSERTAR Y MODIFICAR
-    public calificacionesJB(int ID_usuario, int ID_producto, int calificacion) {
+    public calificacionesJB(int ID_usuario, int ID_producto, int calificacion,Date fecha_calificacion) {
         this.ID_usuario = ID_usuario;
         this.ID_producto = ID_producto;
         this.calificacion = calificacion;
+        this.fecha_calificacion = fecha_calificacion;
     }
 
     //METODOS GET Y SET
@@ -44,19 +45,19 @@ public class calificacionesJB implements Serializable{
         this.ID_calificacion = ID_calificacion;
     }
 
-    public int getID_usuario() {
+    public int getId_usuario() {
         return ID_usuario;
     }
 
-    public void setID_usuario(int ID_usuario) {
+    public void setId_usuario(int ID_usuario) {
         this.ID_usuario = ID_usuario;
     }
 
-    public int getID_producto() {
+    public int getId_producto() {
         return ID_producto;
     }
 
-    public void setID_producto(int ID_producto) {
+    public void setId_producto(int ID_producto) {
         this.ID_producto = ID_producto;
     }
 

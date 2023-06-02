@@ -42,11 +42,11 @@ public class envioJB implements Serializable {
         this.recibio=recibio;
     }
 
-    public int getID_envio() {
+    public int getId_envio() {
         return ID_envio;
     }
 
-    public void setID_envio(int ID_envio) {
+    public void setId_envio(int ID_envio) {
         this.ID_envio = ID_envio;
     }
 
