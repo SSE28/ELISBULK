@@ -7,7 +7,7 @@ import java.sql.Date;
 import java.util.ArrayList;
 import java.util.List;
 public class usuariosDAO {
-    public static final String select = "Select * from usuarios order by ID_usuarios";
+    public static final String select = "Select * from usuarios order by ID_usuario";
     public static final String insert="insert into usuarios(usuario,nombre,apellido,direccion,email,contraseña,fechaNac) values (?,?,?,?,?,?,?)";
     public static final String delete="delete from usuarios where ID_usuario=?";
     public static final String modificar="Update usuarios set usuario=?,nombre=?,apellido=?,direccion=?,email=?,contraseña=?,fechaNac=? where ID_usuario=?";
@@ -29,8 +29,8 @@ public class usuariosDAO {
             while(rs.next());
             {
                 String usuario= rs.getString("usuario");
-                String email=rs.getString("email");
-                String contraseña=rs.getString("contraseña");
+                email = rs.getString("email");
+                contraseña=rs.getString("contraseña");
                 usuari=new usuariosJB(usuario,email,contraseña);
             }
             Conexion.close(st);
@@ -42,7 +42,7 @@ public class usuariosDAO {
         return usuari;
     }
 
-    //MOSTRAR
+    //MOSTRAR/SELECCIONAR
 
     public List<usuariosJB> Select()
     {
@@ -85,7 +85,7 @@ public class usuariosDAO {
 
 
     //INSETAR
-    public void insertar(usuariosJB usuarios) {
+    public int insertar(usuariosJB usuarios) {
 
         Connection con;
         PreparedStatement st;
@@ -94,23 +94,26 @@ public class usuariosDAO {
             con = Conexion.getConnection();
             assert con != null;
             st = con.prepareStatement(insert);
-            st.setString(1,usuarios.getUsuario());
-            st.setString(2,usuarios.getNombre());
-            st.setString(3,usuarios.getApellido());
-            st.setString(4,usuarios.getDireccion());
-            st.setString(5,usuarios.getEmail());
-            st.setString(6,usuarios.getContraseña());
-            st.setDate(7,usuarios.getfechaNac());
+            st.setString(1, usuarios.getUsuario());
+            st.setString(2, usuarios.getNombre());
+            st.setString(3, usuarios.getApellido());
+            st.setString(4, usuarios.getDireccion());
+            st.setString(5, usuarios.getEmail());
+            st.setString(6, usuarios.getContraseña());
+            st.setDate(7, usuarios.getfechaNac());
 
-            if (st.executeUpdate()==1)
+            if (st.executeUpdate() == 1) {
                 System.out.println("Registro Exitoso");
-
+                return 1;
+            }
             Conexion.close(con);
             Conexion.close(st);
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        return 0;
     }
+
     //MOFIICAR
 
     public void modificar(usuariosJB usuarios)
@@ -133,10 +136,8 @@ public class usuariosDAO {
 
             if(st.executeUpdate()==1)
                 System.out.println("Registro Actualizado");
-
             Conexion.close(con);
             Conexion.close(st);
-
         } catch (SQLException e) {
             e.printStackTrace();
             System.out.println("Error");
@@ -148,28 +149,54 @@ public class usuariosDAO {
     {
         Connection con;
         PreparedStatement st;
-
         try{
+
             con=Conexion.getConnection();
             assert con != null;
             st=con.prepareStatement(delete);
-
             st.setInt(1,usuarios.getId_usuario());
 
             if(st.executeUpdate()==1)
                 System.out.println("Registro Eliminado");
-
             Conexion.close(con);
             st.close();
-
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
     }
 
+    //BUSCA
+    public usuariosJB listarId(int ID)
+    {
+        usuariosJB usuari=null;
+        String sql="Select * from usuarios where ID_usuario="+ID;
+        Connection conecta;
+        PreparedStatement st;
+        ResultSet rs;
 
+        try{
+            conecta=Conexion.getConnection();
+            assert conecta != null;
+            st=conecta.prepareStatement(sql);
+            rs=st.executeQuery();
+            while (rs.next()){
 
-
+                int ID_usuario = rs.getInt("ID_usuario");
+                String usuario = rs.getString("usuario");
+                String nombre=rs.getString("nombre");
+                String apellido =rs.getString("apellido");
+                String direccion=rs.getString("direccion");
+                String email=rs.getString("email");
+                String contraseña=rs.getString("contraseña");
+                Date fechaNac=rs.getDate("fechaNaci");
+                usuari=new usuariosJB(ID_usuario,usuario, nombre, apellido, direccion,email,contraseña,fechaNac);
+            }
+            Conexion.close(conecta);
+            st.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return usuari;
+    }
 
 }

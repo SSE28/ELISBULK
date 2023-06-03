@@ -4,13 +4,14 @@ import Modelo.*;
 
 import java.sql.*;
 //import java.sql.Date;
+import java.sql.Date;
 import java.util.*;
 
 public class categoriasDAO {
-    public static final String select = "Select * from categorias order by categorias";
+    public static final String select = "Select * from categorias order by ID_categoria";
     public static final String insert="insert into categorias(nombre_cat) values (?)";
     public static final String delete="delete from categorias where ID_categoria=?";
-    public static final String modificar="Update categorias set ID_categoria, nombre_cate";
+    public static final String modificar="Update categorias set nombre_cate=? where ID_categoria=?";
 
     //MOSTRAR
 
@@ -69,7 +70,7 @@ public class categoriasDAO {
         }
     }
 
-    //MOFIICAR
+    //MODFICAR
 
     public void modificar(categoriasJB categorias)
     {
@@ -82,8 +83,6 @@ public class categoriasDAO {
             st=con.prepareStatement(modificar);
 
             st.setString(1,categorias.getNombre_cate());
-            st.setInt(2,categorias.getId_categoria());
-
             if(st.executeUpdate()==1)
                 System.out.println("Registro Actualizado");
 
@@ -122,29 +121,33 @@ public class categoriasDAO {
 
     }
 
-    public categoriasJB listarId(int id)
+    //BUSCA
+    public categoriasJB listarId(int ID)
     {
-        categoriasJB cat=new categoriasJB();
-        String sql="Select * from categoria where ID_categoria="+id;
-        Connection conec;
+        categoriasJB cate=null;
+        String sql="Select * from categoria where ID_categoria="+ID;
+        Connection conecta;
         PreparedStatement st;
         ResultSet rs;
+
         try{
-            conec=Conexion.getConnection();
-            assert conec != null;
-            st=conec.prepareStatement(sql);
+            conecta=Conexion.getConnection();
+            assert conecta != null;
+            st=conecta.prepareStatement(sql);
             rs=st.executeQuery();
             while (rs.next()){
-                cat.setNombre_cate(rs.getString(2));
-            }
-            Conexion.close(conec);
-            st.close();
 
+                int ID_categoria = rs.getInt("ID_categoria");
+                String nombre_cate = rs.getString("nombre categoria");
+
+                cate=new categoriasJB(ID_categoria, nombre_cate);
+            }
+            Conexion.close(conecta);
+            st.close();
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
-        return cat;
+        return cate;
     }
 
 }

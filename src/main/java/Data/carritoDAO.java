@@ -4,17 +4,18 @@ import Modelo.*;
 
 import java.sql.*;
 //import java.sql.Date;
+import java.sql.Date;
 import java.util.*;
 
 public class carritoDAO {
 
-    public static final String select = "Select * from carrito order by carrito";
+    public static final String select = "Select * from carrito order by ID_carrito";
     public static final String insert="insert into carrito(ID_producto,cantidad_precion,subtotal) values (?,?,?,?)";
     public static final String delete="delete from carrito where ID_carrito=?";
-    public static final String modificar="Update carrito set precio,subtotal";
+    public static final String modificar="Update carrito set cantidad=?,precio=?,subtotal=? where ID_carrito=?";
 
     //MOSTRAR
-    public List<carritoJB> Select()
+    public List<carritoJB> selecciona()
     {
         Statement st ;
         ResultSet rs ;
@@ -88,9 +89,9 @@ public class carritoDAO {
             con=Conexion.getConnection();
             assert con != null;
             st=con.prepareStatement(modificar);
-
-            st.setFloat(1,carrito.getPrecio());
-            st.setFloat(2,carrito.getSubtotal());
+            st.setFloat(1,carrito.getCantidad());
+            st.setFloat(2,carrito.getPrecio());
+            st.setFloat(3,carrito.getSubtotal());
 
             if(st.executeUpdate()==1)
                 System.out.println("Registro Actualizado");
@@ -127,6 +128,38 @@ public class carritoDAO {
             e.printStackTrace();
         }
 
+    }
+
+    //BUSCA
+    public carritoJB listarId(int ID)
+    {
+        carritoJB carrito=null;
+        String sql="Select * from carrito where ID_carrito="+ID;
+        Connection conecta;
+        PreparedStatement st;
+        ResultSet rs;
+
+        try{
+            conecta=Conexion.getConnection();
+            assert conecta != null;
+            st=conecta.prepareStatement(sql);
+            rs=st.executeQuery();
+            while (rs.next()){
+
+                int ID_carrito = rs.getInt("ID_carrito");
+                int ID_usuario = rs.getInt("ID_usuario");
+                int ID_producto = rs.getInt("ID_producto");
+                Float cantidad = rs.getFloat("cantidad");
+                Float precio=rs.getFloat("precio");
+                Float subtotal =rs.getFloat("subtotal");
+                carrito=new carritoJB(ID_carrito,ID_usuario,ID_producto,cantidad,precio,subtotal);
+            }
+            Conexion.close(conecta);
+            st.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return carrito;
     }
 
 }
