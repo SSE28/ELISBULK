@@ -1,2 +1,4 @@
-package Data;public class promocionesDAO {
+package Data;
+
+public class promocionesDAO {
 }

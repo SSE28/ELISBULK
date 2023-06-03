@@ -1,2 +1,4 @@
-package Data;public class ordenesDAO {
+package Data;
+
+public class ordenesDAO {
 }

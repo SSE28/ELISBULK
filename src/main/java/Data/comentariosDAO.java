@@ -1,2 +1,4 @@
-package Data;public class comentariosDAO {
+package Data;
+
+public class comentariosDAO {
 }
