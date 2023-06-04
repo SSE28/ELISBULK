@@ -63,7 +63,7 @@ public class productosDAO {
             st.setString(1, produc.getNombre());
             st.setFloat(2, produc.getprecio());
             st.setString(3, produc.getDescripcion());
-            //st.setInt(4, produc.getID_categoria());
+            st.setInt(4, produc.getCategoria());
 
             if (st.executeUpdate() == 1)
                 System.out.println("Registro Exitoso");
