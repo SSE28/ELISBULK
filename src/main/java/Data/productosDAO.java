@@ -20,7 +20,7 @@ public class productosDAO {
         ResultSet rs ;
         productoJB pro;
 
-        List<productoJB> produc = new ArrayList<>();
+        List<productoJB> productos = new ArrayList<>();
 
         try {
             Connection con = Conexion.getConnection();
@@ -36,7 +36,7 @@ public class productosDAO {
                 int ID_categoria = rs.getInt("id categoria");
 
                 pro = new productoJB (ID_producto,nombre_pro, precio,descripcion, ID_categoria);
-                produc.add(pro);
+                productos.add(pro);
 
             }
             Conexion.close(st);
@@ -47,7 +47,7 @@ public class productosDAO {
             e.printStackTrace();
         }
 
-        return produc;
+        return productos;
     }
 
     //INSETAR
@@ -131,7 +131,7 @@ public class productosDAO {
     //BUSCA
     public productoJB listarId(int ID)
     {
-        productoJB produc=null;
+        productoJB product=null;
         String sql="Select * from productos where ID_orden="+ID;
         Connection conecta;
         PreparedStatement st;
@@ -150,7 +150,7 @@ public class productosDAO {
                 String descripcion = rs.getString("descripcion");
                 int ID_categoria = rs.getInt("ID_categoria");
 
-                produc = new productoJB (ID_producto, nombre_pro,precio,descripcion,ID_categoria);
+                product = new productoJB (ID_producto, nombre_pro,precio,descripcion,ID_categoria);
 
             }
             Conexion.close(conecta);
@@ -158,7 +158,7 @@ public class productosDAO {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return produc;
+        return product;
     }
 
 }
