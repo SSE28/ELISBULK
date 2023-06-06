@@ -13,7 +13,7 @@
         <a class="navbar-brand" href="index.jsp">
             <img src="./Images/logo%20pagina%20web.png" alt="" width="34" height="34"
                  class="d-inline-block align-text-center">
-            Eli´s Bulk
+            Recetas de Mamá
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
