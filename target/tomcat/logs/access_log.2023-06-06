@@ -83,3 +83,4 @@
 0:0:0:0:0:0:0:1 - - [06/Jun/2023:17:32:25 -0600] "GET /EliS_Bulk/Vistas/crear_cuenta.jsp HTTP/1.1" 200 3752 http-bio-8080-exec-9 236
 0:0:0:0:0:0:0:1 - - [06/Jun/2023:17:33:05 -0600] "GET /EliS_Bulk/Vistas/crear_cuenta.jsp HTTP/1.1" 200 4281 http-bio-8080-exec-9 223
 0:0:0:0:0:0:0:1 - - [06/Jun/2023:17:33:38 -0600] "GET /EliS_Bulk/Vistas/crear_cuenta.jsp HTTP/1.1" 200 4280 http-bio-8080-exec-9 144
+0:0:0:0:0:0:0:1 - - [06/Jun/2023:17:34:07 -0600] "GET /EliS_Bulk/Vistas/crear_cuenta.jsp HTTP/1.1" 200 4306 http-bio-8080-exec-9 118
