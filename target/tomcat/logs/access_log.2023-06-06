@@ -6,3 +6,6 @@
 0:0:0:0:0:0:0:1 - - [06/Jun/2023:15:34:11 -0600] "GET /EliS_Bulk1/Vistas/inicio.jsp HTTP/1.1" 200 1546 http-bio-8080-exec-7 345
 0:0:0:0:0:0:0:1 - - [06/Jun/2023:15:34:11 -0600] "GET /EliS_Bulk1/Imagen/logo%20pagina%20web.png HTTP/1.1" 404 1033 http-bio-8080-exec-8 0
 0:0:0:0:0:0:0:1 - - [06/Jun/2023:15:57:19 -0600] "GET /EliS_Bulk1/Vistas/inicio.jsp HTTP/1.1" 200 1557 http-bio-8080-exec-1 242
+0:0:0:0:0:0:0:1 - - [06/Jun/2023:16:06:37 -0600] "GET /EliS_Bulk1/Vistas/inicio.jsp HTTP/1.1" 404 1007 http-bio-8080-exec-5 18
+0:0:0:0:0:0:0:1 - - [06/Jun/2023:16:06:37 -0600] "GET /favicon.ico HTTP/1.1" 404 - http-bio-8080-exec-5 0
+0:0:0:0:0:0:0:1 - - [06/Jun/2023:16:06:40 -0600] "GET /EliS_Bulk1/Vistas/inicio.jsp HTTP/1.1" 404 1007 http-bio-8080-exec-5 0
