@@ -8,43 +8,53 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-  <link rel="icon" href="../Imagen/logo pagina web.png">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <title>Inicio Sesion</title>
+    <link rel="icon" href="../Imagen/logo pagina web.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Inicio Sesion</title>
 </head>
 <body>
 
 
 <center>
-  <div class="snippet-container mt-5">
-    <h2>
-      Inicio de sesion
-    </h2>
-    <form action="../SVinicio" method="post">
-      <div class="card" style="width: 30rem;">
-        <div class="card-body">
-          <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Email</label>
-            <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-          </div>
-          <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label mt-2">Contraseña</label>
-            <input type="password" name="contraseña" class="form-control mt-2" id="exampleInputPassword1">
-          </div>
-          <button type="submit" name="accion" value="ingresar" class="btn btn-primary mt-2">Submit</button>
-          <div class="mt-3">
-            <a href="registro.jsp">
-              Vous n'avez pas de compte ? Inscrivez-vous ici
-            </a>
-          </div>
-        </div>
-      </div>
-    </form>
-  </div>
-  <footer style="background: black">
-    <p style="color: white">Derechos Reservados &copy;  Eli´sBulk</p>
-  </footer>
+    <div class="snippet-container mt-5">
+        <h2>
+            Inicio de sesion
+        </h2>
+        <form action="../SVinicio" method="post">
+            <div class="card" style="width: 50rem;">
+                <div class="card-body">
+                    <div class="mb-3 row">
+                        <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="inputEmail">
+                        </div>
+                    </div>
+                    <div class="mb-3 row">
+                        <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+                        <div class="col-sm-10">
+                            <input type="password" class="form-control" id="inputPassword">
+                        </div>
+                    </div>
+                    <div>
+                    <p>
+                        <button type="submit" class="btn btn-primary">Inicia sesión</button>
+                    </p>
+                    </div>
+
+
+                        <a href="registro.jsp">
+                            Vous n'avez pas de compte ? Inscrivez-vous ici
+                        </a>
+
+                </div>
+            </div>
+
+        </form>
+    </div>
+    <footer style="background: black">
+        <p style="color: white">Derechos Reservados &copy; Eli´sBulk</p>
+    </footer>
 </center>
 </body>
 </html>
