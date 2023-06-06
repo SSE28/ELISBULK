@@ -42,8 +42,7 @@
                     </p>
                     </div>
 
-
-                        <a href="registro.jsp">
+                        <a href="crear_cuenta.jsp">
                             Vous n'avez pas de compte ? Inscrivez-vous ici
                         </a>
 
