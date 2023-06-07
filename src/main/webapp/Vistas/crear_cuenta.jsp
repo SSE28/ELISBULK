@@ -18,73 +18,71 @@
 <center>
     <div class="snippet-container mt-5">
         <h2>
-            Registrate
+            <p>Registrate</p>
         </h2>
-        <form action="../SV" method="post">
+        <form action=" " method="post">
             <div class="card" style="width: 50rem;">
                 <div class="card-body">
                     <div class="row g-3">
                         <div class="col-md-4">
                             <label for="validationDefault01" class="form-label">Prénom</label>
-                            <input type="text" class="form-control" id="validationDefault01" value="Mark" required>
+                            <input type="text" class="form-control" id="validationDefault01" value=" " required>
                         </div>
-                        <div class="col-md-4">
-                            <label for="validationDefault02" class="form-label">Le nom</label>
-                            <input type="text" class="form-control" id="validationDefault02" value="Otto" required>
-                        </div>
-                        <div class="col-md-4">
-                            <label for="validationDefault01" class="form-label">Utilisateur</label>
-                        </div>
-                        <div class="col-md-6">
-                            <label for="inputEmail4" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="inputEmail4">
-                        </div>
-                        <div class="col-md-6">
-                            <label for="inputPassword4" class="form-label">Password</label>
-                            <input type="password" class="form-control" id="inputPassword4">
-                        </div>
-                        <div class="col-12">
-                            <label for="inputAddress" class="form-label">Direccion</label>
-                            <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-                        </div>
-                        <div class="col-12">
-                            <label for="inputAddress2" class="form-label">Address 2</label>
-                            <input type="text" class="form-control" id="inputAddress2"
-                                   placeholder="Apartment, studio, or floor">
-                        </div>
-                        <div class="col-md-6">
-                            <label for="inputCity" class="form-label">City</label>
-                            <input type="text" class="form-control" id="inputCity">
-                        </div>
-                        <div class="col-md-4">
-                            <label for="inputState" class="form-label">State</label>
-                            <select id="inputState" class="form-select">
-                                <option selected>Choose...</option>
-                                <option>...</option>
-                            </select>
-                        </div>
-                        <div class="col-md-2">
-                            <label for="inputZip" class="form-label">Zip</label>
-                            <input type="text" class="form-control" id="inputZip">
-                        </div>
-                        <div class="col-12">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="gridCheck">
-                                <label class="form-check-label" for="gridCheck">
-                                    Check me out
-                                </label>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <button type="submit" class="btn btn-primary">Sign in</button>
+
+                    <div class="col-md-4">
+                        <label for="validationDefault02" class="form-label">Le nom</label>
+                        <input type="text" class="form-control" id="validationDefault02" value=" " required>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="validationDefaultUsername" class="form-label">Utilisateur</label>
+                        <div class="input-group">
+                            <span class="input-group-text" id="inputGroupPrepend2">@</span>
+                            <input type="text" class="form-control" id="validationDefaultUsername"
+                                   aria-describedby="inputGroupPrepend2" required>
                         </div>
                     </div>
+                    <div class="col-md-6">
+                        <label for="inputEmail" class="form-label">Poster</label>
+                        <input type="email" class="form-control" id="inputEmail" placeholder="example@gmail.com"
+                               value=" " required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="inputPassword" class="form-label">Mot de passe</label>
+                        <input type="password" class="form-control" id="inputPassword" value="    " required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="inputdate" class="form-label">Date de naissance</label>
+                        <input type="text" class="form-control" id="inputdate" values=" " required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="inputCity" class="form-label">Ville</label>
+                        <input type="text" class="form-control" id="inputCity" placeholder="México">
+                    </div>
+
+                    <div class="col-md-10">
+                        <label for="inputAddress" class="form-label">Adresse</label>
+                        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                    </div>
+                    <div class="col-md-2">
+                        <label for="inputZip" class="form-label">Code postal</label>
+                        <input type="text" class="form-control" id="inputZip">
+                    </div>
+
+                    <div class="col-12">
+                        <p>
+                            <button type="submit" class="btn btn-primary">Crear cuenta</button>
+                        </p>
+                    </div>
+
                 </div>
+            </div>
+
         </form>
     </div>
 
-    <footer style="background: black">
+    <footer style="background: blue">
         <p style="color: white">Derechos Reservados &copy; Eli´sBulk</p>
+
     </footer>
 </center>
 </body>

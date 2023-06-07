@@ -24,6 +24,7 @@
         <form action="../SVinicio" method="post">
             <div class="card" style="width: 50rem;">
                 <div class="card-body">
+
                     <div class="mb-3 row">
                         <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
                         <div class="col-sm-10">
