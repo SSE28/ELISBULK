@@ -12,3 +12,15 @@
 0:0:0:0:0:0:0:1 - - [07/Jun/2023:15:08:31 -0600] "GET /EliS_Bulk/Vistas/crear_cuenta.jsp HTTP/1.1" 200 4037 http-bio-8080-exec-9 1
 0:0:0:0:0:0:0:1 - - [07/Jun/2023:15:08:57 -0600] "GET /EliS_Bulk/Vistas/iniciosesion.jsp HTTP/1.1" 200 1897 http-bio-8080-exec-9 130
 0:0:0:0:0:0:0:1 - - [07/Jun/2023:15:18:58 -0600] "GET /EliS_Bulk/Vistas/crear_cuenta.jsp HTTP/1.1" 200 4035 http-bio-8080-exec-4 376
+0:0:0:0:0:0:0:1 - - [07/Jun/2023:15:32:37 -0600] "GET /EliS_Bulk/Vistas/iniciarsesion.jsp HTTP/1.1" 404 1019 http-bio-8080-exec-7 63
+0:0:0:0:0:0:0:1 - - [07/Jun/2023:15:32:45 -0600] "GET /EliS_Bulk/Vistas/iniciosesion.jsp HTTP/1.1" 200 1897 http-bio-8080-exec-7 19
+0:0:0:0:0:0:0:1 - - [07/Jun/2023:15:33:16 -0600] "GET /EliS_Bulk/index HTTP/1.1" 404 981 http-bio-8080-exec-7 44
+0:0:0:0:0:0:0:1 - - [07/Jun/2023:15:33:29 -0600] "GET /EliS_Bulk HTTP/1.1" 302 - http-bio-8080-exec-7 0
+0:0:0:0:0:0:0:1 - - [07/Jun/2023:15:33:30 -0600] "GET /EliS_Bulk/ HTTP/1.1" 200 1802 http-bio-8080-exec-7 174
+0:0:0:0:0:0:0:1 - - [07/Jun/2023:15:33:30 -0600] "GET /EliS_Bulk/Estilo/estilos.css HTTP/1.1" 404 1007 http-bio-8080-exec-7 5
+0:0:0:0:0:0:0:1 - - [07/Jun/2023:15:33:30 -0600] "GET /EliS_Bulk/Imagen/.png HTTP/1.1" 404 993 http-bio-8080-exec-5 3
+0:0:0:0:0:0:0:1 - - [07/Jun/2023:15:33:32 -0600] "GET /EliS_Bulk/Vistas/iniciosesion.jsp HTTP/1.1" 200 1897 http-bio-8080-exec-5 20
+0:0:0:0:0:0:0:1 - - [07/Jun/2023:15:33:51 -0600] "GET /EliS_Bulk/Vistas/iniciosesion.jsp HTTP/1.1" 200 1897 http-bio-8080-exec-5 10
+0:0:0:0:0:0:0:1 - - [07/Jun/2023:15:34:19 -0600] "GET /EliS_Bulk/ HTTP/1.1" 200 1953 http-bio-8080-exec-5 190
+0:0:0:0:0:0:0:1 - - [07/Jun/2023:15:34:19 -0600] "GET /EliS_Bulk/Estilo/estilos.css HTTP/1.1" 404 1007 http-bio-8080-exec-6 4
+0:0:0:0:0:0:0:1 - - [07/Jun/2023:15:34:19 -0600] "GET /EliS_Bulk/Imagen/.png HTTP/1.1" 404 993 http-bio-8080-exec-7 11

@@ -1,4 +1,4 @@
-package Controlador;
+package Controlador.SVusuarios;
 import Data.usuariosDAO;
 import Modelo.usuariosJB;
 import javax.servlet.ServletException;
