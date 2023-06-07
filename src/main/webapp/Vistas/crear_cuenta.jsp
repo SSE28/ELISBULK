@@ -29,54 +29,54 @@
                             <input type="text" class="form-control" id="validationDefault01" value=" " required>
                         </div>
 
-                    <div class="col-md-4">
-                        <label for="validationDefault02" class="form-label">Le nom</label>
-                        <input type="text" class="form-control" id="validationDefault02" value=" " required>
-                    </div>
-                    <div class="col-md-4">
-                        <label for="validationDefaultUsername" class="form-label">Utilisateur</label>
-                        <div class="input-group">
-                            <span class="input-group-text" id="inputGroupPrepend2">@</span>
-                            <input type="text" class="form-control" id="validationDefaultUsername"
-                                   aria-describedby="inputGroupPrepend2" required>
+
+                        <div class="col-md-4">
+                            <label for="validationDefault02" class="form-label">Le nom</label>
+                            <input type="text" class="form-control" id="validationDefault02" value=" " required>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="validationDefaultUsername" class="form-label">Utilisateur</label>
+                            <div class="input-group">
+                                <span class="input-group-text" id="inputGroupPrepend2">@</span>
+                                <input type="text" class="form-control" id="validationDefaultUsername"
+                                       aria-describedby="inputGroupPrepend2" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputEmail" class="form-label">Poster</label>
+                            <input type="email" class="form-control" id="inputEmail" placeholder="example@gmail.com"
+                                   value=" " required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputPassword" class="form-label">Mot de passe</label>
+                            <input type="password" class="form-control" id="inputPassword" value="" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputdate" class="form-label">Date de naissance</label>
+                            <input type="text" class="form-control" id="inputdate" values=" " required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputCity" class="form-label">Ville</label>
+                            <input type="text" class="form-control" id="inputCity" placeholder="México">
+                        </div>
+
+                        <div class="col-md-10">
+                            <label for="inputAddress" class="form-label">Adresse</label>
+                            <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                        </div>
+                        <div class="col-md-2">
+                            <label for="inputZip" class="form-label">Code postal</label>
+                            <input type="text" class="form-control" id="inputZip">
+                        </div>
+
+                        <div class="col-12">
+                            <p>
+                                <button type="submit" class="btn btn-primary">Crear cuenta</button>
+                            </p>
                         </div>
                     </div>
-                    <div class="col-md-6">
-                        <label for="inputEmail" class="form-label">Poster</label>
-                        <input type="email" class="form-control" id="inputEmail" placeholder="example@gmail.com"
-                               value=" " required>
-                    </div>
-                    <div class="col-md-6">
-                        <label for="inputPassword" class="form-label">Mot de passe</label>
-                        <input type="password" class="form-control" id="inputPassword" value="    " required>
-                    </div>
-                    <div class="col-md-6">
-                        <label for="inputdate" class="form-label">Date de naissance</label>
-                        <input type="text" class="form-control" id="inputdate" values=" " required>
-                    </div>
-                    <div class="col-md-6">
-                        <label for="inputCity" class="form-label">Ville</label>
-                        <input type="text" class="form-control" id="inputCity" placeholder="México">
-                    </div>
-
-                    <div class="col-md-10">
-                        <label for="inputAddress" class="form-label">Adresse</label>
-                        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-                    </div>
-                    <div class="col-md-2">
-                        <label for="inputZip" class="form-label">Code postal</label>
-                        <input type="text" class="form-control" id="inputZip">
-                    </div>
-
-                    <div class="col-12">
-                        <p>
-                            <button type="submit" class="btn btn-primary">Crear cuenta</button>
-                        </p>
-                    </div>
-
                 </div>
             </div>
-
         </form>
     </div>
 

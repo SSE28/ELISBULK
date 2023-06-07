@@ -52,7 +52,7 @@
 
         </form>
     </div>
-    <footer style="background: black">
+    <footer style="background: blue">
         <p style="color: white">Derechos Reservados &copy; Eli´sBulk</p>
     </footer>
 </center>
