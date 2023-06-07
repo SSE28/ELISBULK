@@ -6,6 +6,7 @@ Create table usuarios(
     nombre varchar (50),
     apellido varchar(25),
     direccion varchar(50),
+    zip int,
     email varchar(50),
     contraseña varchar(50),
     fechaNac date
