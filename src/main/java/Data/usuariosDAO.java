@@ -8,9 +8,9 @@ import java.util.ArrayList;
 import java.util.List;
 public class usuariosDAO {
     public static final String select = "Select * from usuarios order by ID_usuario";
-    public static final String insert="insert into usuarios(usuario,nombre,apellido,direccion,email,contraseña,fechaNac) values (?,?,?,?,?,?,?)";
+    public static final String insert="insert into usuarios(usuario,nombre,apellido,direccion,zip,email,contraseña,fechaNac) values (?,?,?,?,?,?,?,?)";
     public static final String delete="delete from usuarios where ID_usuario=?";
-    public static final String modificar="Update usuarios set usuario=?,nombre=?,apellido=?,direccion=?,email=?,contraseña=?,fechaNac=? where ID_usuario=?";
+    public static final String modificar="Update usuarios set usuario=?,nombre=?,apellido=?,direccion=?,zip=?,email=?,contraseña=?,fechaNac=? where ID_usuario=?";
     public static final String valida="select * from usuarios where email=? and contraseña=?";
 
     //VALIDAR USUARIO Y CONTRASEÑA
@@ -64,11 +64,12 @@ public class usuariosDAO {
                 String nombre = rs.getString("nombre");
                 String apellido = rs.getString("appellido");
                 String direccion = rs.getString("direccion");
+                int zip = rs.getInt("codigo postal");
                 String email = rs.getString("email");
                 String contraseña = rs.getString("contraseña");
                 Date fechaNac = rs.getDate("fechaNac");
 
-                use = new usuariosJB(ID_usuario,usuario,  nombre,  apellido,direccion,email, contraseña,  fechaNac);
+                use = new usuariosJB(ID_usuario,usuario,  nombre,  apellido,direccion,zip,email, contraseña,  fechaNac);
                 usuarios.add(use);
 
             }
@@ -98,9 +99,10 @@ public class usuariosDAO {
             st.setString(2, usuarios.getNombre());
             st.setString(3, usuarios.getApellido());
             st.setString(4, usuarios.getDireccion());
-            st.setString(5, usuarios.getEmail());
-            st.setString(6, usuarios.getContraseña());
-            st.setDate(7, usuarios.getfechaNac());
+            st.setInt(5, usuarios.getZip());
+            st.setString(6, usuarios.getEmail());
+            st.setString(7, usuarios.getContraseña());
+            st.setDate(8, usuarios.getfechaNac());
 
             if (st.executeUpdate() == 1) {
                 System.out.println("Registro Exitoso");
@@ -130,9 +132,10 @@ public class usuariosDAO {
             st.setString(2,usuarios.getNombre());
             st.setString(3,usuarios.getApellido());
             st.setString(4,usuarios.getDireccion());
-            st.setString(5,usuarios.getEmail());
-            st.setString(6,usuarios.getContraseña());
-            st.setDate(7,usuarios.getfechaNac());
+            st.setInt(5, usuarios.getZip());
+            st.setString(6,usuarios.getEmail());
+            st.setString(7,usuarios.getContraseña());
+            st.setDate(8,usuarios.getfechaNac());
 
             if(st.executeUpdate()==1)
                 System.out.println("Registro Actualizado");
@@ -186,10 +189,11 @@ public class usuariosDAO {
                 String nombre=rs.getString("nombre");
                 String apellido =rs.getString("apellido");
                 String direccion=rs.getString("direccion");
+                int zip= rs.getInt("codigo postal");
                 String email=rs.getString("email");
                 String contraseña=rs.getString("contraseña");
                 Date fechaNac=rs.getDate("fechaNaci");
-                usuari=new usuariosJB(ID_usuario,usuario, nombre, apellido, direccion,email,contraseña,fechaNac);
+                usuari=new usuariosJB(ID_usuario,usuario, nombre, apellido, direccion,zip,email,contraseña,fechaNac);
             }
             Conexion.close(conecta);
             st.close();

@@ -9,5 +9,8 @@
         <module name="EliS_Bulk" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="EliS_Bulk1" target="1.7" />
+    </bytecodeTargetLevel>
   </component>
 </project>

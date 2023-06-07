@@ -9,6 +9,7 @@ public class usuariosJB implements Serializable {
     String nombre;
     String apellido;
     String direccion;
+    int zip;
     String email;
     String contraseña;
     Date fechaNac;
@@ -30,23 +31,25 @@ public class usuariosJB implements Serializable {
     }
 
     //INSERTAR Y MODIFICAR
-    public usuariosJB(String usuario, String nombre, String apellido, String direccion, String email, String contraseña, Date fechaNac) {
+    public usuariosJB(String usuario, String nombre, String apellido, String direccion,int zip, String email, String contraseña, Date fechaNac) {
         this.usuario = usuario;
         this.nombre = nombre;
         this.apellido = apellido;
         this.direccion = direccion;
+        this.zip = zip;
         this.email = email;
         this.contraseña = contraseña;
         this.fechaNac = fechaNac;
     }
 
     //MOSTRAR
-    public usuariosJB(int ID_usuario, String usuario, String nombre, String apellido, String direccion, String email, String contraseña, Date fechaNac) {
+    public usuariosJB(int ID_usuario, String usuario, String nombre, String apellido, String direccion,int zip, String email, String contraseña, Date fechaNac) {
         this.ID_usuario = ID_usuario;
         this.usuario = usuario;
         this.nombre = nombre;
         this.apellido = apellido;
         this.direccion = direccion;
+        this.zip = zip;
         this.email = email;
         this.contraseña = contraseña;
         this.fechaNac = fechaNac;
@@ -92,6 +95,14 @@ public class usuariosJB implements Serializable {
 
     public void setDireccion(String direccion) {
         this.direccion = direccion;
+    }
+
+    public int getZip() {
+        return zip;
+    }
+
+    public void setZip(int zip) {
+        this.zip = zip;
     }
 
     public String getEmail() {
