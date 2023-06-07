@@ -1,2 +1,4 @@
-package Controlador;public class SVcrear_cuenta {
+package Controlador;
+
+public class SVcrear_cuenta {
 }
